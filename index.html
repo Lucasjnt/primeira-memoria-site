@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Primeira Memória — Quadros Maternidade Artesanais</title>
+<meta name="description" content="Quadros maternidade feitos à mão pela Cilene, em São Paulo. Pérola por pérola. Sete dias por peça. Onde o amor encontra a memória.">
+<meta property="og:title" content="Primeira Memória — Quadros Maternidade Artesanais">
+<meta property="og:description" content="Onde o amor encontra a memória. Feito à mão, em São Paulo.">
+<meta property="og:image" content="assets/images/hero-elisa-1.png">
+<link rel="icon" href="assets/logos/favicon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --perola: #F4EBDC;
+    --marfim: #FAF6EE;
+    --ouro: #B8924E;
+    --champanhe: #D7B97A;
+    --sepia: #3A2A1F;
+    --escuro: #1F1814;
+    --rosa: #D8B4A8;
+    --azul: #A4B5C2;
+    --whatsapp: #25D366;
+    --noir: #0E0B09;
+    --line: rgba(58,42,31,0.10);
+    --line-dark: rgba(244,235,220,0.12);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--marfim);
+    font-family: 'Manrope', system-ui, sans-serif;
+    color: var(--sepia);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--ouro); color: var(--marfim); }
+  img, video { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+  /* ─── TYPE ─── */
+  .serif { font-family: 'Cormorant Garamond', serif; font-weight: 400; letter-spacing: -0.005em; }
+  .eyebrow {
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ouro);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .eyebrow::before {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--ouro);
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(250,246,238,0.78);
+    backdrop-filter: saturate(160%) blur(14px);
+    -webkit-backdrop-filter: saturate(160%) blur(14px);
+    border-bottom: 1px solid var(--line);
+    transition: background 0.3s ease;
+  }
+  nav.dark {
+    background: rgba(14,11,9,0.62);
+    border-bottom: 1px solid var(--line-dark);
+    color: var(--marfim);
+  }
+  nav .brand {
+    display: block;
+    height: 26px;
+    line-height: 0;
+  }
+  nav .brand img {
+    height: 100%;
+    width: auto;
+    display: block;
+  }
+  nav .brand img.dark { display: none; }
+  nav.dark .brand img.light { display: none; }
+  nav.dark .brand img.dark { display: block; }
+  @media (max-width: 720px) { nav .brand { height: 22px; } }
+  nav .links {
+    display: flex;
+    gap: 28px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  nav .links a:hover { color: var(--ouro); }
+  nav .cta {
+    background: var(--sepia);
+    color: var(--marfim);
+    padding: 9px 18px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background 0.2s, transform 0.2s;
+  }
+  nav.dark .cta { background: var(--marfim); color: var(--escuro); }
+  nav .cta:hover { transform: translateY(-1px); background: var(--ouro); color: var(--marfim); }
+  @media (max-width: 720px) { nav .links { display: none; } nav { padding: 14px 20px; } }
+
+  /* ─── HERO ─── */
+  .hero {
+    position: relative;
+    height: 100vh;
+    min-height: 640px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    color: var(--marfim);
+  }
+  .hero video, .hero .hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(14,11,9,0.18) 0%, rgba(14,11,9,0.05) 35%, rgba(14,11,9,0.55) 100%);
+    z-index: 1;
+  }
+  .hero .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 60px 90px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 7.5vw, 112px);
+    font-weight: 400;
+    line-height: 0.96;
+    letter-spacing: -0.015em;
+    margin-bottom: 24px;
+    max-width: 12ch;
+  }
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--champanhe);
+  }
+  .hero .lede {
+    font-size: clamp(15px, 1.2vw, 18px);
+    font-weight: 300;
+    max-width: 36ch;
+    margin-bottom: 38px;
+    color: rgba(250,246,238,0.86);
+    line-height: 1.55;
+  }
+  .hero .actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    padding: 14px 26px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .btn-primary { background: var(--marfim); color: var(--escuro); }
+  .btn-primary:hover { background: var(--ouro); color: var(--marfim); transform: translateY(-2px); }
+  .btn-ghost { border: 1px solid rgba(250,246,238,0.5); color: var(--marfim); }
+  .btn-ghost:hover { background: rgba(250,246,238,0.08); border-color: var(--marfim); }
+  .btn-dark { background: var(--sepia); color: var(--marfim); }
+  .btn-dark:hover { background: var(--escuro); }
+  .btn svg { width: 14px; height: 14px; }
+  .scroll-hint {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(250,246,238,0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .scroll-hint::after {
+    content: '';
+    width: 1px;
+    height: 32px;
+    background: rgba(250,246,238,0.4);
+    animation: scrollLine 2s ease-in-out infinite;
+  }
+  @keyframes scrollLine {
+    0%, 100% { transform: scaleY(1); transform-origin: top; }
+    50% { transform: scaleY(0.3); transform-origin: top; }
+  }
+  @media (max-width: 720px) {
+    .hero .hero-content { padding: 0 24px 60px; }
+    .scroll-hint { display: none; }
+  }
+
+  /* ─── STATS BAR ─── */
+  .stats {
+    background: var(--noir);
+    color: var(--marfim);
+    padding: 90px 60px;
+  }
+  .stats-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+  .stat {
+    padding: 0 32px;
+    border-right: 1px solid var(--line-dark);
+    text-align: left;
+  }
+  .stat:last-child { border-right: none; }
+  .stat:first-child { padding-left: 0; }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 5vw, 72px);
+    font-weight: 300;
+    line-height: 1;
+    color: var(--champanhe);
+    margin-bottom: 14px;
+    letter-spacing: -0.02em;
+  }
+  .stat-label {
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(250,246,238,0.6);
+    font-weight: 400;
+  }
+  @media (max-width: 900px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+    .stat { border: none; padding: 0; }
+  }
+  @media (max-width: 720px) {
+    .stats { padding: 60px 24px; }
+    .stats-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+
+  /* ─── SECTION BASE ─── */
+  section.feature {
+    padding: 140px 60px;
+    background: var(--marfim);
+  }
+  section.feature.dark { background: var(--noir); color: var(--marfim); }
+  section.feature.pearl { background: var(--perola); }
+  .feature-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .feature-inner.reverse { direction: rtl; }
+  .feature-inner.reverse > * { direction: ltr; }
+  .feature-text .eyebrow { margin-bottom: 28px; }
+  .feature-text h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4.2vw, 64px);
+    font-weight: 400;
+    line-height: 1.02;
+    letter-spacing: -0.015em;
+    margin-bottom: 28px;
+    max-width: 14ch;
+  }
+  .feature-text h2 em { font-style: italic; color: var(--ouro); font-weight: 300; }
+  .feature-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--sepia);
+    margin-bottom: 18px;
+    max-width: 42ch;
+    font-weight: 300;
+  }
+  section.feature.dark .feature-text p { color: rgba(250,246,238,0.78); }
+  .feature-text .micro {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--ouro);
+    letter-spacing: 0.06em;
+  }
+  section.feature.dark .feature-text .micro { border-color: var(--line-dark); }
+
+  .feature-media {
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    border-radius: 4px;
+    background: var(--perola);
+    box-shadow: 0 30px 80px rgba(58,42,31,0.10);
+  }
+  section.feature.dark .feature-media {
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+  }
+  .feature-media video, .feature-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @media (max-width: 900px) {
+    section.feature { padding: 90px 24px; }
+    .feature-inner { grid-template-columns: 1fr; gap: 50px; }
+    .feature-inner.reverse { direction: ltr; }
+  }
+
+  /* ─── BIG SHOWCASE (full-bleed image with text below) ─── */
+  .showcase {
+    background: var(--noir);
+    color: var(--marfim);
+    padding: 0;
+  }
+  .showcase-media {
+    width: 100%;
+    aspect-ratio: 21/9;
+    overflow: hidden;
+    background: var(--escuro);
+  }
+  .showcase-media video, .showcase-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .showcase-text {
+    padding: 100px 60px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .showcase-text .eyebrow { margin-bottom: 30px; }
+  .showcase-text h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(40px, 5vw, 80px);
+    font-weight: 400;
+    line-height: 1.04;
+    letter-spacing: -0.015em;
+    margin-bottom: 28px;
+  }
+  .showcase-text h2 em { font-style: italic; color: var(--champanhe); font-weight: 300; }
+  .showcase-text p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: rgba(250,246,238,0.78);
+    max-width: 56ch;
+    margin: 0 auto 36px;
+    font-weight: 300;
+  }
+  @media (max-width: 720px) {
+    .showcase-text { padding: 60px 24px; }
+    .showcase-media { aspect-ratio: 4/5; }
+  }
+
+  /* ─── GALLERY ─── */
+  .gallery {
+    padding: 140px 60px;
+    background: var(--marfim);
+  }
+  .gallery-head {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 80px;
+  }
+  .gallery-head .eyebrow { margin-bottom: 24px; }
+  .gallery-head h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 60px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    margin-bottom: 18px;
+  }
+  .gallery-head h2 em { font-style: italic; color: var(--ouro); font-weight: 300; }
+  .gallery-head p {
+    font-size: 16px;
+    color: var(--sepia);
+    line-height: 1.6;
+    font-weight: 300;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .gallery-grid figure {
+    overflow: hidden;
+    border-radius: 4px;
+    background: var(--perola);
+    aspect-ratio: 4/5;
+    position: relative;
+  }
+  .gallery-grid figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+  }
+  .gallery-grid figure:hover img { transform: scale(1.04); }
+  .gallery-grid figure figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 16px 18px;
+    background: linear-gradient(180deg, transparent, rgba(14,11,9,0.7));
+    color: var(--marfim);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .gallery-grid figure:hover figcaption { opacity: 1; }
+  .gallery-grid .span-6 { grid-column: span 6; aspect-ratio: 16/10; }
+  .gallery-grid .span-4 { grid-column: span 4; }
+  .gallery-grid .span-3 { grid-column: span 3; }
+  @media (max-width: 900px) {
+    .gallery { padding: 80px 24px; }
+    .gallery-grid { grid-template-columns: repeat(6, 1fr); }
+    .gallery-grid .span-6, .gallery-grid .span-4, .gallery-grid .span-3 { grid-column: span 6; aspect-ratio: 4/5; }
+  }
+
+  /* ─── PROCESS ─── */
+  .process {
+    background: var(--perola);
+    padding: 140px 60px;
+  }
+  .process-head { text-align: center; max-width: 800px; margin: 0 auto 80px; }
+  .process-head .eyebrow { margin-bottom: 24px; }
+  .process-head h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4.5vw, 64px);
+    font-weight: 400;
+    line-height: 1.04;
+    letter-spacing: -0.015em;
+  }
+  .process-head h2 em { font-style: italic; color: var(--ouro); font-weight: 300; }
+  .process-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+  }
+  .step {
+    border-top: 1px solid var(--ouro);
+    padding-top: 28px;
+  }
+  .step-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px;
+    font-weight: 300;
+    color: var(--ouro);
+    line-height: 1;
+    margin-bottom: 18px;
+  }
+  .step h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 14px;
+    color: var(--escuro);
+  }
+  .step p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--sepia);
+    font-weight: 300;
+  }
+  @media (max-width: 900px) {
+    .process { padding: 80px 24px; }
+    .process-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+
+  /* ─── PRICING ─── */
+  .pricing {
+    padding: 140px 60px;
+    background: var(--marfim);
+    border-top: 1px solid var(--line);
+  }
+  .pricing-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .pricing-text .eyebrow { margin-bottom: 28px; }
+  .pricing-text h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 56px);
+    font-weight: 400;
+    line-height: 1.04;
+    letter-spacing: -0.015em;
+    margin-bottom: 24px;
+  }
+  .pricing-text h2 em { font-style: italic; color: var(--ouro); font-weight: 300; }
+  .pricing-text p {
+    font-size: 15px;
+    color: var(--sepia);
+    line-height: 1.65;
+    margin-bottom: 18px;
+    font-weight: 300;
+    max-width: 38ch;
+  }
+  .price-table {
+    background: var(--perola);
+    padding: 48px;
+    border-radius: 6px;
+  }
+  .price-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(58,42,31,0.12);
+    gap: 24px;
+  }
+  .price-row:last-child { border-bottom: none; }
+  .price-row .label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--escuro);
+  }
+  .price-row .desc {
+    font-size: 13px;
+    color: var(--sepia);
+    margin-top: 4px;
+    font-weight: 300;
+    max-width: 40ch;
+  }
+  .price-row .value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--ouro);
+    white-space: nowrap;
+  }
+  .price-foot {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px dashed rgba(58,42,31,0.18);
+    font-size: 13px;
+    color: var(--sepia);
+    font-weight: 300;
+  }
+  @media (max-width: 900px) {
+    .pricing { padding: 80px 24px; }
+    .pricing-inner { grid-template-columns: 1fr; gap: 40px; }
+    .price-table { padding: 28px; }
+  }
+
+  /* ─── CILENE ─── */
+  .cilene {
+    background: var(--noir);
+    color: var(--marfim);
+    padding: 0;
+    overflow: hidden;
+  }
+  .cilene-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    min-height: 640px;
+  }
+  .cilene-media {
+    background: var(--escuro);
+    overflow: hidden;
+  }
+  .cilene-media img, .cilene-media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .cilene-text {
+    padding: 100px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .cilene-text .eyebrow { margin-bottom: 28px; color: var(--champanhe); }
+  .cilene-text .eyebrow::before { background: var(--champanhe); }
+  .cilene-text h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 56px);
+    font-weight: 400;
+    line-height: 1.06;
+    letter-spacing: -0.015em;
+    margin-bottom: 32px;
+  }
+  .cilene-text h2 em { font-style: italic; color: var(--champanhe); font-weight: 300; }
+  .cilene-text p {
+    font-size: 16px;
+    line-height: 1.75;
+    color: rgba(250,246,238,0.82);
+    margin-bottom: 18px;
+    font-weight: 300;
+    max-width: 44ch;
+  }
+  .cilene-text .signature {
+    margin-top: 32px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--champanhe);
+  }
+  @media (max-width: 900px) {
+    .cilene-inner { grid-template-columns: 1fr; }
+    .cilene-media { aspect-ratio: 4/5; }
+    .cilene-text { padding: 60px 24px; }
+  }
+
+  /* ─── FAQ ─── */
+  .faq {
+    padding: 140px 60px;
+    background: var(--marfim);
+  }
+  .faq-inner { max-width: 900px; margin: 0 auto; }
+  .faq-head { text-align: center; margin-bottom: 60px; }
+  .faq-head .eyebrow { margin-bottom: 22px; }
+  .faq-head h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 56px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+  }
+  .faq-head h2 em { font-style: italic; color: var(--ouro); font-weight: 300; }
+  .faq-item {
+    border-top: 1px solid var(--line);
+    padding: 26px 0;
+  }
+  .faq-item:last-child { border-bottom: 1px solid var(--line); }
+  .faq-q {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--escuro);
+    list-style: none;
+    transition: color 0.2s;
+    user-select: none;
+  }
+  .faq-q::after {
+    content: '+';
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--ouro);
+    transition: transform 0.25s;
+  }
+  details[open] .faq-q::after { transform: rotate(45deg); }
+  details[open] .faq-q { color: var(--ouro); }
+  .faq-a {
+    margin-top: 14px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--sepia);
+    font-weight: 300;
+    max-width: 70ch;
+  }
+  @media (max-width: 720px) { .faq { padding: 80px 24px; } }
+
+  /* ─── FINAL CTA ─── */
+  .final-cta {
+    background: var(--escuro);
+    color: var(--marfim);
+    padding: 140px 60px;
+    text-align: center;
+    background-image: radial-gradient(circle at 50% 50%, rgba(184,146,78,0.16) 0%, transparent 60%);
+  }
+  .final-cta .eyebrow { margin-bottom: 28px; color: var(--champanhe); }
+  .final-cta .eyebrow::before { background: var(--champanhe); }
+  .final-cta h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(40px, 5.5vw, 88px);
+    font-weight: 400;
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+    max-width: 14ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .final-cta h2 em { font-style: italic; color: var(--champanhe); font-weight: 300; }
+  .final-cta p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(250,246,238,0.7);
+    max-width: 50ch;
+    margin: 0 auto 44px;
+    font-weight: 300;
+  }
+  .final-cta .actions {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-wpp {
+    background: var(--marfim);
+    color: var(--escuro);
+    padding: 16px 32px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.25s;
+  }
+  .btn-wpp:hover { background: var(--ouro); color: var(--marfim); transform: translateY(-2px); }
+  .btn-wpp svg { width: 18px; height: 18px; }
+  @media (max-width: 720px) { .final-cta { padding: 80px 24px; } }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--noir);
+    color: rgba(250,246,238,0.62);
+    padding: 70px 60px 40px;
+    border-top: 1px solid var(--line-dark);
+  }
+  .footer-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 50px;
+  }
+  .footer-col h4 {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--marfim);
+    margin-bottom: 18px;
+  }
+  .footer-col a { display: block; padding: 6px 0; font-size: 13px; transition: color 0.2s; }
+  .footer-col a:hover { color: var(--champanhe); }
+  .footer-brand {
+    display: block;
+    margin-bottom: 18px;
+  }
+  .footer-brand img {
+    height: 32px;
+    width: auto;
+    display: block;
+  }
+  .footer-brand-tag {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--champanhe);
+    margin-top: 12px;
+  }
+  .footer-tag {
+    font-size: 13px;
+    line-height: 1.6;
+    max-width: 30ch;
+    font-weight: 300;
+  }
+  .footer-bottom {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-top: 30px;
+    border-top: 1px solid var(--line-dark);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: 12px;
+    color: rgba(250,246,238,0.4);
+    letter-spacing: 0.04em;
+  }
+  @media (max-width: 900px) {
+    footer { padding: 50px 24px 30px; }
+    .footer-inner { grid-template-columns: 1fr 1fr; gap: 30px; }
+  }
+  @media (max-width: 540px) {
+    .footer-inner { grid-template-columns: 1fr; }
+  }
+
+  /* ─── REVEAL ─── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .scroll-hint::after { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="#" class="brand" aria-label="Primeira Memória">
+    <img class="light" src="assets/logos/wordmark-trimmed-light.png" alt="Primeira Memória">
+    <img class="dark" src="assets/logos/wordmark-trimmed-dark.png" alt="Primeira Memória">
+  </a>
+  <div class="links">
+    <a href="#processo">O processo</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#cilene">A artesã</a>
+    <a href="#preco">Encomenda</a>
+  </div>
+  <a href="https://wa.me/5511970572424?text=Oi!%20Vim%20pelo%20site,%20queria%20saber%20do%20quadro" class="cta" target="_blank">
+    Encomendar
+  </a>
+</nav>
+
+<!-- ─── HERO ─── -->
+<header class="hero">
+  <video autoplay muted loop playsinline poster="assets/images/hero-elisa-1.png">
+    <source src="assets/videos/hero-site.mp4" type="video/mp4">
+  </video>
+  <div class="hero-content">
+    <h1>Onde o amor<br><em>encontra a memória.</em></h1>
+    <p class="lede">Quadros maternidade artesanais. Pérola por pérola, à mão, em São Paulo. Sete dias por peça. A primeira coisa que ele vai ver crescendo.</p>
+    <div class="actions">
+      <a href="https://wa.me/5511970572424?text=Oi!%20Vim%20pelo%20site,%20queria%20saber%20do%20quadro" class="btn btn-primary" target="_blank">
+        Encomendar pelo WhatsApp
+        <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#processo" class="btn btn-ghost">Ver como é feito</a>
+    </div>
+  </div>
+  <div class="scroll-hint">scroll</div>
+</header>
+
+<!-- ─── STATS ─── -->
+<section class="stats">
+  <div class="stats-grid">
+    <div class="stat reveal">
+      <div class="stat-num">20<span style="font-size:0.5em">×</span>20</div>
+      <div class="stat-label">Centímetros · escala íntima</div>
+    </div>
+    <div class="stat reveal">
+      <div class="stat-num">7</div>
+      <div class="stat-label">Dias por peça · sem pressa</div>
+    </div>
+    <div class="stat reveal">
+      <div class="stat-num">800+</div>
+      <div class="stat-label">Pérolas coladas à mão</div>
+    </div>
+    <div class="stat reveal">
+      <div class="stat-num">1</div>
+      <div class="stat-label">Cilene · do começo ao fim</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FEATURE 1 — Pérola por pérola ─── -->
+<section class="feature" id="processo">
+  <div class="feature-inner">
+    <div class="feature-text reveal">
+      <span class="eyebrow">Atelier · São Paulo</span>
+      <h2>Pérola por <em>pérola.</em></h2>
+      <p>Uma moldura tem cerca de oitocentas pérolas. Cada uma é colada à mão, alinhada com cuidado, posicionada em paralelo à borda.</p>
+      <p>Não é máquina. Não é terceirização. É a Cilene, na mesa do atelier, fazendo do começo ao fim.</p>
+      <div class="micro">Tempo médio só desta etapa: 2 dias.</div>
+    </div>
+    <div class="feature-media reveal">
+      <video autoplay muted loop playsinline>
+        <source src="assets/videos/atelier-a-maos.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FEATURE 2 — Sapatinho dourado ─── -->
+<section class="feature dark">
+  <div class="feature-inner reverse">
+    <div class="feature-text reveal">
+      <span class="eyebrow">Pintura · Acabamento dourado</span>
+      <h2>Cada sapatinho, <em>pintado a pincel.</em></h2>
+      <p>O sapatinho central é moldado em resina e pintado com tinta acrílica metálica — uma camada, secagem, lixa, segunda camada.</p>
+      <p>Resina molhada não pega tinta. Tem coisa que não acelera.</p>
+      <div class="micro">Etapa: 1 dia · entre secagens.</div>
+    </div>
+    <div class="feature-media reveal">
+      <video autoplay muted loop playsinline>
+        <source src="assets/videos/atelier-b-sapatinho.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SHOWCASE — 21:9 wide ─── -->
+<section class="showcase">
+  <div class="showcase-media">
+    <video autoplay muted loop playsinline>
+      <source src="assets/videos/atelier-c-embalagem.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="showcase-text reveal">
+    <span class="eyebrow">A entrega · embalagem</span>
+    <h2>Sai do atelier <em>quando tá pronto.</em></h2>
+    <p>Embalado em papel de seda, fita de cetim, caixa rígida. Chega em casa como deveria chegar — íntegro, com o cuidado que levou pra ser feito.</p>
+  </div>
+</section>
+
+<!-- ─── GALLERY ─── -->
+<section class="gallery" id="galeria">
+  <div class="gallery-head reveal">
+    <span class="eyebrow">Peças entregues</span>
+    <h2>Cada quadro é <em>de um bebê só.</em></h2>
+    <p>A gente faz para a menina diferente da do menino. O fundo, o nome, os ornamentos — você escolhe junto comigo no WhatsApp.</p>
+  </div>
+  <div class="gallery-grid">
+    <figure class="span-6 reveal">
+      <img src="assets/images/hero-elisa-1.png" alt="Quadro Elisa em ambiente de quarto de bebê">
+      <figcaption>Elisa · floral rosa · pérola branca</figcaption>
+    </figure>
+    <figure class="span-3 reveal">
+      <img src="assets/images/quadro-arthur-frontal.jpg" alt="Quadro Arthur">
+      <figcaption>Arthur · poá branco · sapatinho dourado</figcaption>
+    </figure>
+    <figure class="span-3 reveal">
+      <img src="assets/images/quadro-coroa.jpg" alt="Quadro Coroa">
+      <figcaption>Coroa · pérola branca · rosa pink</figcaption>
+    </figure>
+    <figure class="span-4 reveal">
+      <img src="assets/images/quadro-elisa.jpg" alt="Quadro Elisa">
+      <figcaption>Elisa · detalhe da moldura</figcaption>
+    </figure>
+    <figure class="span-4 reveal">
+      <img src="assets/images/quadro-heitor.jpg" alt="Quadro Heitor">
+      <figcaption>Heitor · azul marinho · âncora dourada</figcaption>
+    </figure>
+    <figure class="span-4 reveal">
+      <img src="assets/images/quadro-lucca.jpg" alt="Quadro Lucca">
+      <figcaption>Lucca · ursinho dourado</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ─── PROCESS ─── -->
+<section class="process">
+  <div class="process-head reveal">
+    <span class="eyebrow">Como funciona</span>
+    <h2>Três passos, <em>sete dias.</em></h2>
+  </div>
+  <div class="process-grid">
+    <div class="step reveal">
+      <div class="step-num">01</div>
+      <h3>Conversa no WhatsApp</h3>
+      <p>Me manda mensagem com o nome do bebê, data prevista, e a vibe que você quer. Eu volto com uma proposta de fundo, ornamentos e cor.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">02</div>
+      <h3>Aprovação do esboço</h3>
+      <p>Antes de começar a colar pérola, você recebe foto do tecido escolhido, do sapatinho e da letra do nome. Só começa quando tá certo.</p>
+    </div>
+    <div class="step reveal">
+      <div class="step-num">03</div>
+      <h3>Sete dias depois — entrega</h3>
+      <p>Embalado em papel de seda, fita de cetim e caixa rígida. Sai do atelier quando tá pronto. Frete pro Brasil todo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PRICING ─── -->
+<section class="pricing" id="preco">
+  <div class="pricing-inner">
+    <div class="pricing-text reveal">
+      <span class="eyebrow">Encomenda</span>
+      <h2>Preço <em>justo pelo tempo.</em></h2>
+      <p>O preço varia pelo que tem dentro do quadro. Mais ornamentos, mais pérolas, mais detalhes — mais tempo de mesa.</p>
+      <p>A Cilene faz cerca de quatro a seis quadros por mês. Por isso a gente abre encomenda com mês de antecedência.</p>
+    </div>
+    <div class="price-table reveal">
+      <div class="price-row">
+        <div>
+          <div class="label">Clássico</div>
+          <div class="desc">Moldura de pérolas, sapatinho dourado, nome em letra serifada</div>
+        </div>
+        <div class="value">R$ 320</div>
+      </div>
+      <div class="price-row">
+        <div>
+          <div class="label">Ornamentado</div>
+          <div class="desc">Clássico + 4 apliques barrocos (folhas, coroa, âncora, rosas)</div>
+        </div>
+        <div class="value">R$ 390</div>
+      </div>
+      <div class="price-row">
+        <div>
+          <div class="label">Principesco</div>
+          <div class="desc">Versão completa: pérolas em duas faixas, ornamentos premium, dourado em ouro velho</div>
+        </div>
+        <div class="value">R$ 490</div>
+      </div>
+      <div class="price-foot">
+        Tamanho único 20×20 cm. Frete pro Brasil todo, calculado por CEP. Pagamento via Pix ou cartão (até 6×).
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CILENE ─── -->
+<section class="cilene" id="cilene">
+  <div class="cilene-inner">
+    <div class="cilene-media">
+      <img src="assets/images/pessoa-colando.png" alt="Cilene trabalhando no atelier">
+    </div>
+    <div class="cilene-text reveal">
+      <span class="eyebrow">A artesã</span>
+      <h2>Conhece a <em>Cilene.</em></h2>
+      <p>Há anos faz quadros maternidade — começou pra netos de amigas, depois pra família, depois pra família dos colegas.</p>
+      <p>Cada peça é dela do começo ao fim. Sem máquina, sem terceirização. A pérola que tá no quadro foi colada pela mão dela.</p>
+      <p>Hoje, com a Primeira Memória, abre encomendas pro Brasil todo.</p>
+      <div class="signature">— Cilene · São Paulo</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FAQ ─── -->
+<section class="faq">
+  <div class="faq-inner">
+    <div class="faq-head reveal">
+      <span class="eyebrow">Perguntas</span>
+      <h2>O que toda <em>encomendante</em> pergunta.</h2>
+    </div>
+    <details class="faq-item">
+      <summary class="faq-q">Quanto tempo até chegar?</summary>
+      <div class="faq-a">São sete dias de produção a partir da aprovação do esboço, mais o frete (de 3 a 8 dias úteis dependendo do CEP). Se o chá de bebê é pra daqui a duas semanas, encomende já.</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">Posso escolher o nome, o fundo, as cores?</summary>
+      <div class="faq-a">Sim. Tudo é montado junto com você no WhatsApp. Eu mostro fotos de tecidos disponíveis, ornamentos prontos, e a gente combina antes de começar. Nada começa antes da sua aprovação.</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">É seguro pra pendurar no quartinho do bebê?</summary>
+      <div class="faq-a">Sim. Tudo selado em shadow box com vidro acrílico. Pérolas e ornamentos ficam protegidos atrás do vidro — não tem peça solta acessível. Pode pendurar tranquilo.</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">Vocês fazem outros tamanhos?</summary>
+      <div class="faq-a">Hoje só 20×20 cm. É a escala que combina com a peça — íntima, pra perto do berço, pra pendurar acima da cômoda. Tamanhos maiores tiram a delicadeza do trabalho.</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">Pode ser presente pra chá de bebê?</summary>
+      <div class="faq-a">É o que mais a gente faz. A peça chega embalada como presente — papel de seda, fita de cetim, caixa rígida. Tem cartão escrito à mão se você pedir.</div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-q">E se eu quiser dar de presente sem saber o nome do bebê ainda?</summary>
+      <div class="faq-a">A gente faz um voucher. Você presenteia o voucher, e quando o bebê nascer (ou o nome for definido), o destinatário entra em contato comigo pra fechar. Vale 6 meses.</div>
+    </details>
+  </div>
+</section>
+
+<!-- ─── FINAL CTA ─── -->
+<section class="final-cta">
+  <span class="eyebrow">Encomende</span>
+  <h2>A primeira memória <em>começa agora.</em></h2>
+  <p>A Cilene está abrindo agenda. Me chama no WhatsApp e a gente conversa devagar sobre o quadro do seu bebê.</p>
+  <div class="actions">
+    <a href="https://wa.me/5511970572424?text=Oi!%20Vim%20pelo%20site,%20queria%20saber%20do%20quadro" class="btn-wpp" target="_blank">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.83 9.83 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.82 11.82 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.48-8.413"/></svg>
+      Falar no WhatsApp
+    </a>
+    <a href="#galeria" class="btn btn-ghost">Ver mais peças</a>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-brand">
+        <img src="assets/logos/wordmark-trimmed-dark.png" alt="Primeira Memória">
+        <span class="footer-brand-tag">Onde o amor encontra a memória.</span>
+      </div>
+      <p class="footer-tag">Quadros maternidade artesanais. Feitos à mão, em São Paulo, pela Cilene. Para o Brasil todo.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Site</h4>
+      <a href="#processo">O processo</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#cilene">A artesã</a>
+      <a href="#preco">Encomenda</a>
+    </div>
+    <div class="footer-col">
+      <h4>Encomenda</h4>
+      <a href="https://wa.me/5511970572424" target="_blank">WhatsApp</a>
+      <a href="https://instagram.com/primeira.memoria" target="_blank">Instagram</a>
+      <a href="mailto:contato@primeiramemoria.com.br">E-mail</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="#">Política de privacidade</a>
+      <a href="#">Termos de uso</a>
+      <a href="#">Política de troca</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Primeira Memória · São Paulo · Brasil</span>
+    <span>Feito por Cilene · à mão · sem pressa</span>
+  </div>
+</footer>
+
+<script>
+  // Nav darken on scroll past hero
+  const nav = document.getElementById('nav');
+  const heroHeight = window.innerHeight * 0.7;
+  let isDark = false;
+  function checkNav() {
+    const y = window.scrollY;
+    const sections = document.querySelectorAll('section.feature.dark, section.showcase, section.cilene, section.final-cta, footer');
+    let onDark = false;
+    sections.forEach(s => {
+      const r = s.getBoundingClientRect();
+      if (r.top <= 60 && r.bottom > 60) onDark = true;
+    });
+    if (onDark !== isDark) {
+      nav.classList.toggle('dark', onDark);
+      isDark = onDark;
+    }
+  }
+  window.addEventListener('scroll', checkNav, { passive: true });
+  checkNav();
+
+  // Reveal on intersect
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -80px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
