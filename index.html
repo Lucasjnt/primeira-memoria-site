@@ -708,84 +708,72 @@
     .process-grid { grid-template-columns: 1fr; gap: 40px; }
   }
 
-  /* ─── PRICING ─── */
+  /* ─── PRICING (simplified) ─── */
   .pricing {
     padding: 140px 60px;
     background: var(--marfim);
     border-top: 1px solid var(--line);
   }
-  .pricing-inner {
-    max-width: 1200px;
+  .pricing-simple {
+    max-width: 720px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1.3fr;
-    gap: 80px;
-    align-items: start;
+    text-align: center;
   }
-  .pricing-text .eyebrow { margin-bottom: 28px; }
-  .pricing-text h2 {
+  .pricing-simple .eyebrow { margin-bottom: 28px; justify-content: center; }
+  .pricing-simple h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(36px, 4vw, 56px);
+    font-size: clamp(38px, 4.5vw, 64px);
     font-weight: 400;
     line-height: 1.04;
     letter-spacing: -0.015em;
     margin-bottom: 24px;
-  }
-  .pricing-text h2 em { font-style: italic; color: var(--ouro); font-weight: 300; }
-  .pricing-text p {
-    font-size: 15px;
-    color: var(--sepia);
-    line-height: 1.65;
-    margin-bottom: 18px;
-    font-weight: 300;
-    max-width: 38ch;
-  }
-  .price-table {
-    background: var(--perola);
-    padding: 48px;
-    border-radius: 6px;
-  }
-  .price-row {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: baseline;
-    padding: 22px 0;
-    border-bottom: 1px solid rgba(58,42,31,0.12);
-    gap: 24px;
-  }
-  .price-row:last-child { border-bottom: none; }
-  .price-row .label {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    font-weight: 500;
     color: var(--escuro);
   }
-  .price-row .desc {
-    font-size: 13px;
+  .pricing-simple h2 em { font-style: italic; color: var(--ouro); font-weight: 300; }
+  .pricing-simple .pricing-lede {
+    font-size: 17px;
     color: var(--sepia);
-    margin-top: 4px;
+    line-height: 1.7;
     font-weight: 300;
-    max-width: 40ch;
+    max-width: 50ch;
+    margin: 0 auto 50px;
   }
-  .price-row .value {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
-    font-weight: 500;
+  .price-range {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 30px 60px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .price-range .price-from {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
     color: var(--ouro);
-    white-space: nowrap;
+    margin-bottom: 10px;
+    font-weight: 500;
   }
-  .price-foot {
-    margin-top: 28px;
-    padding-top: 20px;
-    border-top: 1px dashed rgba(58,42,31,0.18);
+  .price-range .price-amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 6vw, 84px);
+    font-weight: 400;
+    color: var(--escuro);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .pricing-simple .pricing-meta {
     font-size: 13px;
     color: var(--sepia);
+    line-height: 1.7;
     font-weight: 300;
+    margin-bottom: 38px;
+    letter-spacing: 0.01em;
   }
-  @media (max-width: 900px) {
-    .pricing { padding: 80px 24px; }
-    .pricing-inner { grid-template-columns: 1fr; gap: 40px; }
-    .price-table { padding: 28px; }
+  @media (max-width: 720px) {
+    .pricing { padding: 90px 24px; }
+    .price-range { padding: 24px 32px; }
   }
 
   /* ─── CILENE ─── */
@@ -1179,8 +1167,8 @@
       <figcaption>Heitor · azul marinho · âncora dourada</figcaption>
     </figure>
     <figure class="span-4 reveal">
-      <img loading="lazy" decoding="async" src="assets/images/lifestyle-maria-eduarda-v2.png" alt="Quadro maternidade Maria Eduarda sobre escrivaninha vintage com espelho de moldura dourada">
-      <figcaption>Maria Eduarda · cena de ambientação</figcaption>
+      <img loading="lazy" decoding="async" src="assets/images/quadro-lucca.jpg" alt="Quadro maternidade Lucca — ursinho dourado central">
+      <figcaption>Lucca · ursinho dourado</figcaption>
     </figure>
   </div>
 </section>
@@ -1212,39 +1200,19 @@
 
 <!-- ─── PRICING ─── -->
 <section class="pricing" id="preco">
-  <div class="pricing-inner">
-    <div class="pricing-text reveal">
-      <span class="eyebrow">Encomenda</span>
-      <h2>Três <em>versões.</em></h2>
-      <p>O preço varia pelo que tem dentro do quadro: ornamentos, pérolas, detalhes.</p>
-      <p>A Cilene faz cerca de quatro a seis quadros por mês. Encomende com pelo menos um mês de antecedência.</p>
+  <div class="pricing-simple reveal">
+    <span class="eyebrow">Encomenda</span>
+    <h2>Cada quadro <em>é único.</em></h2>
+    <p class="pricing-lede">Personalização feita junto com você no WhatsApp: nome, fundo, ornamentos, cor.</p>
+    <div class="price-range">
+      <span class="price-from">a partir de</span>
+      <span class="price-amount">R$ 320</span>
     </div>
-    <div class="price-table reveal">
-      <div class="price-row">
-        <div>
-          <div class="label">Clássico</div>
-          <div class="desc">Moldura de pérolas, sapatinho dourado, nome em letra serifada</div>
-        </div>
-        <div class="value">R$ 320</div>
-      </div>
-      <div class="price-row">
-        <div>
-          <div class="label">Ornamentado</div>
-          <div class="desc">Clássico + 4 apliques barrocos (folhas, coroa, âncora, rosas)</div>
-        </div>
-        <div class="value">R$ 390</div>
-      </div>
-      <div class="price-row">
-        <div>
-          <div class="label">Principesco</div>
-          <div class="desc">Versão completa: pérolas em duas faixas, ornamentos premium, dourado em ouro velho</div>
-        </div>
-        <div class="value">R$ 490</div>
-      </div>
-      <div class="price-foot">
-        Tamanho único 20×20 cm. Frete pro Brasil todo, calculado por CEP. Pagamento via Pix ou cartão (até 6×).
-      </div>
-    </div>
+    <p class="pricing-meta">Tamanho 20×20 cm · Frete pro Brasil todo · Pagamento Pix ou cartão até 6×</p>
+    <a href="https://wa.me/5511970572424?text=Oi!%20Vim%20pelo%20site,%20queria%20saber%20do%20quadro" class="btn btn-dark" target="_blank">
+      Falar no WhatsApp
+      <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
   </div>
 </section>
 

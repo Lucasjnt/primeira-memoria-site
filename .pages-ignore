@@ -1,0 +1,6 @@
+.git
+.gitignore
+*.sh
+README*.md
+SEO-GEO-CHECKLIST.md
+.DS_Store
