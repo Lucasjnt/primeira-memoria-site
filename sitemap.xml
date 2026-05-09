@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://primeiramemoria.com.br/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://primeiramemoria.com.br/assets/images/hero-elisa-2.png</image:loc>
+      <image:caption>Quadro maternidade artesanal Primeira Memória — Elisa em ambiente de quarto de bebê</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://primeiramemoria.com.br/assets/images/lifestyle-elisa-v2.png</image:loc>
+      <image:caption>Quadro maternidade Primeira Memória sobre console de madeira</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://primeiramemoria.com.br/assets/images/lifestyle-maria-eduarda-v2.png</image:loc>
+      <image:caption>Quadro maternidade Maria Eduarda em escrivaninha vintage</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://primeiramemoria.com.br/assets/images/quadro-arthur-frontal.jpg</image:loc>
+      <image:caption>Quadro maternidade artesanal Primeira Memória — Arthur, sapatinho dourado, fundo poá branco</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://primeiramemoria.com.br/assets/images/quadro-elisa.jpg</image:loc>
+      <image:caption>Quadro maternidade artesanal Primeira Memória — Elisa, fundo floral rosa, sapatinho pérola</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://primeiramemoria.com.br/assets/images/quadro-coroa.jpg</image:loc>
+      <image:caption>Quadro maternidade artesanal Primeira Memória — moldura de pérolas com coroa dourada, fundo rosa pink</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://primeiramemoria.com.br/assets/images/quadro-heitor.jpg</image:loc>
+      <image:caption>Quadro maternidade artesanal Primeira Memória — Heitor, âncora dourada, fundo azul marinho</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://primeiramemoria.com.br/assets/images/quadro-lucca.jpg</image:loc>
+      <image:caption>Quadro maternidade artesanal Primeira Memória — Lucca, ursinho dourado</image:caption>
+    </image:image>
+  </url>
+</urlset>
