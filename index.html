@@ -470,6 +470,66 @@
     .stats-grid { grid-template-columns: 1fr; gap: 40px; }
   }
 
+  /* ─── MANIFESTO ─── */
+  .manifesto {
+    background: var(--perola);
+    padding: 160px 60px;
+    text-align: center;
+  }
+  .manifesto-inner {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  .manifesto .eyebrow { margin-bottom: 36px; justify-content: center; }
+  .manifesto h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(44px, 5.6vw, 88px);
+    font-weight: 400;
+    line-height: 1.04;
+    letter-spacing: -0.018em;
+    color: var(--escuro);
+    margin-bottom: 50px;
+  }
+  .manifesto h2 em { font-style: italic; color: var(--ouro); font-weight: 300; }
+  .manifesto-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(22px, 2.6vw, 32px);
+    line-height: 1.55;
+    color: var(--sepia);
+    font-weight: 400;
+    max-width: 30ch;
+    margin: 0 auto 56px;
+  }
+  .manifesto-meta {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(14px, 1.2vw, 16px);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ouro);
+    font-weight: 600;
+    margin-bottom: 56px;
+    padding: 22px 0;
+    border-top: 1px solid rgba(184,146,78,0.3);
+    border-bottom: 1px solid rgba(184,146,78,0.3);
+    max-width: 36em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .manifesto-close {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 3.4vw, 44px);
+    line-height: 1.25;
+    color: var(--escuro);
+    font-weight: 400;
+    max-width: 22ch;
+    margin: 0 auto;
+  }
+  .manifesto-close em { font-style: italic; color: var(--ouro); font-weight: 300; }
+  @media (max-width: 720px) {
+    .manifesto { padding: 90px 24px; }
+  }
+
   /* ─── SECTION BASE ─── */
   section.feature {
     padding: 140px 60px;
@@ -1085,6 +1145,17 @@
       <div class="stat-num">1</div>
       <div class="stat-label">Cilene · do começo ao fim</div>
     </div>
+  </div>
+</section>
+
+<!-- ─── MANIFESTO ─── -->
+<section class="manifesto">
+  <div class="manifesto-inner reveal">
+    <span class="eyebrow">Manifesto</span>
+    <h2>Toda família tem<br>uma <em>primeira parede.</em></h2>
+    <p class="manifesto-sub">A primeira coisa que se pendura.<br>A primeira que vai continuar ali depois que ele crescer.</p>
+    <p class="manifesto-meta">Pérola por pérola. À mão. Em São Paulo. Sete dias por peça.</p>
+    <p class="manifesto-close">Pra que o primeiro abraço<br>não vire só <em>lembrança.</em></p>
   </div>
 </section>
 
