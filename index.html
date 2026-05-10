@@ -1073,6 +1073,12 @@
     .footer-inner { grid-template-columns: 1fr; }
   }
 
+  /* ─── Hide native video controls overlay (iOS) ─── */
+  video::-webkit-media-controls-start-playback-button { display: none !important; -webkit-appearance: none; }
+  video::-webkit-media-controls { display: none !important; }
+  video::-webkit-media-controls-panel { display: none !important; }
+  video { pointer-events: none; }
+
   /* ─── REVEAL ─── */
   .reveal {
     opacity: 0;
@@ -1109,7 +1115,7 @@
 
 <!-- ─── HERO ─── -->
 <header class="hero">
-  <video autoplay muted loop playsinline poster="assets/images/hero-elisa-2.png">
+  <video autoplay muted loop playsinline preload="auto" disablepictureinpicture poster="assets/images/hero-elisa-2.png">
     <source src="assets/videos/hero-site.mp4" type="video/mp4">
   </video>
   <div class="hero-content">
@@ -1170,7 +1176,7 @@
       <div class="micro">Tempo médio só desta etapa: 2 dias.</div>
     </div>
     <div class="feature-media reveal">
-      <video autoplay muted loop playsinline>
+      <video muted loop playsinline preload="metadata" disablepictureinpicture>
         <source src="assets/videos/atelier-a-maos.mp4" type="video/mp4">
       </video>
     </div>
@@ -1188,7 +1194,7 @@
       <div class="micro">Etapa: 1 dia · entre secagens.</div>
     </div>
     <div class="feature-media reveal">
-      <video autoplay muted loop playsinline>
+      <video muted loop playsinline preload="metadata" disablepictureinpicture>
         <source src="assets/videos/atelier-b-sapatinho.mp4" type="video/mp4">
       </video>
     </div>
@@ -1419,6 +1425,28 @@
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -80px 0px' });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Lazy autoplay videos — iOS limita autoplay simultâneo, então só toca o que está em tela
+  // Hero é a exceção: tenta tocar imediatamente no load
+  const hero = document.querySelector('.hero video');
+  if (hero) {
+    const tryPlayHero = () => hero.play().catch(() => {});
+    tryPlayHero();
+    document.addEventListener('touchstart', tryPlayHero, { once: true, passive: true });
+    document.addEventListener('click', tryPlayHero, { once: true });
+  }
+
+  const lazyVideoObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      const v = e.target;
+      if (e.isIntersecting) {
+        v.play().catch(() => {});
+      } else {
+        v.pause();
+      }
+    });
+  }, { threshold: 0.25 });
+  document.querySelectorAll('section.feature video, section.showcase video').forEach(v => lazyVideoObs.observe(v));
 </script>
 
 </body>
