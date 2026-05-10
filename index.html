@@ -338,7 +338,9 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(14,11,9,0.18) 0%, rgba(14,11,9,0.05) 35%, rgba(14,11,9,0.55) 100%);
+    background:
+      linear-gradient(180deg, rgba(14,11,9,0.32) 0%, rgba(14,11,9,0.18) 30%, rgba(14,11,9,0.78) 100%),
+      radial-gradient(ellipse at 30% 80%, rgba(14,11,9,0.45) 0%, transparent 60%);
     z-index: 1;
   }
   .hero .hero-content {
@@ -352,11 +354,12 @@
   .hero h1 {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(48px, 7.5vw, 112px);
-    font-weight: 400;
+    font-weight: 500;
     line-height: 0.96;
     letter-spacing: -0.015em;
     margin-bottom: 24px;
     max-width: 12ch;
+    text-shadow: 0 2px 24px rgba(14,11,9,0.45), 0 1px 4px rgba(14,11,9,0.4);
   }
   .hero h1 em {
     font-style: italic;
@@ -365,11 +368,12 @@
   }
   .hero .lede {
     font-size: clamp(15px, 1.2vw, 18px);
-    font-weight: 300;
+    font-weight: 400;
     max-width: 36ch;
     margin-bottom: 38px;
-    color: rgba(250,246,238,0.86);
+    color: rgba(250,246,238,0.96);
     line-height: 1.55;
+    text-shadow: 0 1px 12px rgba(14,11,9,0.5);
   }
   .hero .actions {
     display: flex;
@@ -1176,9 +1180,7 @@
       <div class="micro">Tempo médio só desta etapa: 2 dias.</div>
     </div>
     <div class="feature-media reveal">
-      <video muted loop playsinline preload="metadata" disablepictureinpicture>
-        <source src="assets/videos/atelier-a-maos.mp4" type="video/mp4">
-      </video>
+      <img loading="lazy" decoding="async" src="assets/images/feature-perolas.png" alt="Quadro com moldura de pérolas e sapatinho dourado, cercado por pérolas brancas">
     </div>
   </div>
 </section>
@@ -1194,9 +1196,7 @@
       <div class="micro">Etapa: 1 dia · entre secagens.</div>
     </div>
     <div class="feature-media reveal">
-      <video muted loop playsinline preload="metadata" disablepictureinpicture>
-        <source src="assets/videos/atelier-b-sapatinho.mp4" type="video/mp4">
-      </video>
+      <img loading="lazy" decoding="async" src="assets/images/feature-sapatinho.jpg" alt="Quadro Arthur — sapatinho dourado moldado e pintado a pincel, com ornamentos em ouro velho">
     </div>
   </div>
 </section>
@@ -1204,9 +1204,7 @@
 <!-- ─── SHOWCASE — 21:9 wide ─── -->
 <section class="showcase">
   <div class="showcase-media">
-    <video autoplay muted loop playsinline>
-      <source src="assets/videos/atelier-c-embalagem.mp4" type="video/mp4">
-    </video>
+    <img loading="lazy" decoding="async" src="assets/images/feature-embalagem.png" alt="Quadro embalado em caixa rígida com fita de cetim, papel de seda e flores secas">
   </div>
   <div class="showcase-text reveal">
     <span class="eyebrow">A entrega · embalagem</span>
@@ -1297,7 +1295,7 @@
 <section class="cilene" id="cilene">
   <div class="cilene-inner">
     <div class="cilene-media">
-      <img loading="lazy" decoding="async" src="assets/images/pessoa-colando.png" alt="Cilene trabalhando no atelier">
+      <img loading="lazy" decoding="async" src="assets/images/cilene-real.jpg" alt="Retrato da Cilene, artesã da Primeira Memória">
     </div>
     <div class="cilene-text reveal">
       <span class="eyebrow">A artesã</span>
